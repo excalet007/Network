@@ -1,0 +1,3 @@
+﻿  client.cpp
+c:\users\orcknight\desktop\git\networkprogramming\tcp_multichat\tcp_multichat_client\client.cpp(18): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  TCP_multiChat_client.vcxproj -> C:\Users\orcknight\Desktop\Git\NetworkProgramming\TCP_multiChat\x64\Debug\TCP_multiChat_client.exe
