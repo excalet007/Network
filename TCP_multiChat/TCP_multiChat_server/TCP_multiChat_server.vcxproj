@@ -118,9 +118,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="server.cpp" />
+    <ClCompile Include="SocketAddress.cpp" />
+    <ClCompile Include="SocketUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\masterHeader.h" />
+    <ClInclude Include="..\Include\SocketAddress.h" />
+    <ClInclude Include="..\Include\SocketUtil.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

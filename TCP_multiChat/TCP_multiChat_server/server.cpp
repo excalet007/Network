@@ -2,10 +2,7 @@
 
 int main()
 {
-	WSADATA wsaData;
-	int iResult;
-
-	SOCKET listenSock = INVALID_SOCKET;
+	auto listenSock = INVALID_SOCKET;
 
 	struct addrinfo *result = NULL;
 	struct addrinfo hints;
@@ -18,14 +15,13 @@ int main()
 
 	fd_set mainSet, copySet;
 
-	// initialize winsock
-	iResult = WSAStartup(MAKEWORD(2, 2), &wsaData);
-	if (iResult != 0)
-	{
-		std::cerr << "startup error #" << iResult << std::endl;
-		return 1;
-	}
+	int iResult;
 
+
+	//WSAStartup
+	SocketUtil::StaticInit();
+
+	// initialize winsock
 	ZeroMemory(&hints, sizeof(hints));
 	hints.ai_family = AF_INET;
 	hints.ai_socktype = SOCK_STREAM;
@@ -168,8 +164,7 @@ int main()
 		closesocket(sock);
 	}
 
-	WSACleanup();
-
+	SocketUtil::CleanUp();
 	system("pause");
 	return 0;
 }
