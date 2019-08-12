@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TCP_multiChat_server", "TCP
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TCP_multiChat_client", "TCP_multiChat_client\TCP_multiChat_client.vcxproj", "{308EC651-26CC-49C7-9120-C2CF436393BC}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unionBuilder", "unionBuilder\unionBuilder.vcxproj", "{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{308EC651-26CC-49C7-9120-C2CF436393BC}.Release|x64.Build.0 = Release|x64
 		{308EC651-26CC-49C7-9120-C2CF436393BC}.Release|x86.ActiveCfg = Release|Win32
 		{308EC651-26CC-49C7-9120-C2CF436393BC}.Release|x86.Build.0 = Release|Win32
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Debug|x64.ActiveCfg = Debug|x64
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Debug|x64.Build.0 = Debug|x64
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Debug|x86.ActiveCfg = Debug|Win32
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Debug|x86.Build.0 = Debug|Win32
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Release|x64.ActiveCfg = Release|x64
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Release|x64.Build.0 = Release|x64
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Release|x86.ActiveCfg = Release|Win32
+		{7BA11E20-EBA0-4B98-8C9A-7E9792040EE3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
