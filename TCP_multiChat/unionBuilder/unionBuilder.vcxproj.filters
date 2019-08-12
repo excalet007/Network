@@ -24,10 +24,10 @@
     <ClInclude Include="Inc\SocketAddressFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\SocketUtil.h">
+    <ClInclude Include="Inc\TCPSocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inc\TCPSocket.h">
+    <ClInclude Include="Inc\SocketUtil.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

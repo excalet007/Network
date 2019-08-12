@@ -17,7 +17,6 @@ public:
 private:
 	friend class SocketUtil;
 
-	//private constructor : 
 	TCPSocket(SOCKET inSocket) : mSocket(inSocket){}
 	SOCKET mSocket;
 };

@@ -26,3 +26,18 @@ int SocketUtil::GetLastError()
 {
 	return WSAGetLastError();
 }
+
+TCPSocketPtr SocketUtil::CreateTCPSocket(SocketAddressFamily inEnumFamily)
+{
+	SOCKET sock = socket(inEnumFamily, SOCK_STREAM, IPPROTO_TCP);
+
+	if(sock != INVALID_SOCKET)
+	{
+		return TCPSocketPtr(new TCPSocket(sock));
+	}
+	else
+	{
+		ReportError("SocketUtil::CreateTCPSocket");
+		return nullptr;
+	}
+}

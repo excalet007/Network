@@ -1,1 +1,6 @@
-﻿  TCP_multiChat_server.vcxproj -> C:\Users\orcknight\Desktop\Git\NetworkProgramming\TCP_multiChat\x64\Debug\TCP_multiChat_server.exe
+﻿  server.cpp
+c:\users\orcknight\desktop\git\networkprogramming\tcp_multichat\tcp_multichat_server\server.cpp(101): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\orcknight\desktop\git\networkprogramming\tcp_multichat\tcp_multichat_server\server.cpp(138): warning C4018: '<': signed/unsigned mismatch
+c:\users\orcknight\desktop\git\networkprogramming\tcp_multichat\tcp_multichat_server\server.cpp(145): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+c:\users\orcknight\desktop\git\networkprogramming\tcp_multichat\tcp_multichat_server\server.cpp(162): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  TCP_multiChat_server.vcxproj -> C:\Users\orcknight\Desktop\Git\NetworkProgramming\TCP_multiChat\x64\Debug\TCP_multiChat_server.exe

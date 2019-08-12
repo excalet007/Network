@@ -20,7 +20,13 @@ using std::endl;
 
 using std::shared_ptr;
 
-#include "SocketUtil.h"
+const int MAX_BUFFER_LENGTH = 1024;
+const string SERVER_LOCAL_HOST_SERVICE = "127.0.0.1:54000";
+
 #include "SocketAddress.h"
 #include "SocketAddressFactory.h"
+
+//#include "UDPSocket.h"
 #include "TCPSocket.h"
+	
+#include "SocketUtil.h"
