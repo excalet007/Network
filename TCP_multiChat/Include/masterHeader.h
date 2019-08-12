@@ -22,3 +22,5 @@ using std::shared_ptr;
 
 #include "SocketUtil.h"
 #include "SocketAddress.h"
+#include "SocketAddressFactory.h"
+#include "TCPSocket.h"

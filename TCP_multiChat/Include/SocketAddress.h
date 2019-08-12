@@ -1,3 +1,6 @@
+class SocketAddress;
+typedef shared_ptr< SocketAddress > SocketAddressPtr;
+
 class SocketAddress
 {
 public:
@@ -17,10 +20,9 @@ public:
 		GetAsSockAddrIn()->sin_port = htons(inPort);
 	}
 
-	//copy constructor
+	//SocketAddressFactory use this
 	SocketAddress(const sockaddr& inSockAddr)
 	{
-		//TODO pointer
 		memcpy(&mSockAddr, &inSockAddr, sizeof(sockaddr));
 	}
 
@@ -36,5 +38,3 @@ private:
 		return reinterpret_cast<sockaddr_in*>(&mSockAddr);
 	}
 };
-
-typedef shared_ptr< SocketAddress > SocketAddressPtr;

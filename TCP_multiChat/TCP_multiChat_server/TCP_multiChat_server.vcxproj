@@ -117,14 +117,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Include\TCPSocket.cpp" />
     <ClCompile Include="server.cpp" />
     <ClCompile Include="SocketAddress.cpp" />
+    <ClCompile Include="SocketAddressFactory.cpp" />
     <ClCompile Include="SocketUtil.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\masterHeader.h" />
     <ClInclude Include="..\Include\SocketAddress.h" />
+    <ClInclude Include="..\Include\SocketAddressFactory.h" />
     <ClInclude Include="..\Include\SocketUtil.h" />
+    <ClInclude Include="..\Include\TCPSocket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

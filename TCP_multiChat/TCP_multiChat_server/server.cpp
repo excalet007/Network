@@ -21,6 +21,7 @@ int main()
 	//WSAStartup
 	SocketUtil::StaticInit();
 
+
 	// initialize winsock
 	ZeroMemory(&hints, sizeof(hints));
 	hints.ai_family = AF_INET;
