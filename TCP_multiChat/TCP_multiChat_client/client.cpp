@@ -31,9 +31,11 @@ int main()
 	//make socketPtr
 	TCPSocketPtr clientPtr = SocketUtil::CreateTCPSocket(INET);
 
+	//make address from string
+	SocketAddressPtr serverAddressPtr = SocketAddressFactory::CreateIPv4FromString(DEFAULT_IP_LOCAL);
+
 	//connect
-	SocketAddressPtr socketAddressPtr = SocketAddressFactory::CreateIPv4FromString(SERVER_LOCAL_HOST_SERVICE);
-	clientPtr->Connect(*socketAddressPtr);
+	clientPtr->Connect(*serverAddressPtr);
 
 	//loop escape
 	isRunning = true;
@@ -43,15 +45,15 @@ int main()
 	inputThreadHandler = CreateThread(NULL, 0, inputThread, reinterpret_cast<void*>(&clientPtr), 0, NULL);
 
 	//receive
-	char buf[MAX_BUFFER_LENGTH];
+	char bufRecv[DEFAULT_MAX_BUF_LEN];
 	int byteRecv;
 
 	while (isRunning)
 	{
-		ZeroMemory(buf, MAX_BUFFER_LENGTH);
-		byteRecv = clientPtr->Receive(buf, MAX_BUFFER_LENGTH);
+		ZeroMemory(bufRecv, DEFAULT_MAX_BUF_LEN);
+		byteRecv = clientPtr->Receive(bufRecv, DEFAULT_MAX_BUF_LEN);
 		if (byteRecv > 0)
-			cout << "RECEIVED > " << string(buf, 0, byteRecv) << endl;
+			cout << "RECEIVED > " << string(bufRecv, 0, byteRecv) << endl;
 	}
 
 	//shut down system
@@ -89,7 +91,7 @@ int main()
 //
 //	HANDLE inputThreadHandler;
 //
-//	char buf[MAX_BUFFER_LENGTH];
+//	char buf[DEFAULT_MAX_BUF_LEN];
 //	int byteRecv;
 //
 //	isRunning = true;
@@ -124,8 +126,8 @@ int main()
 //
 //	while (isRunning)
 //	{
-//		ZeroMemory(buf, MAX_BUFFER_LENGTH);
-//		byteRecv = recv(client, buf, MAX_BUFFER_LENGTH, 0);
+//		ZeroMemory(buf, DEFAULT_MAX_BUF_LEN);
+//		byteRecv = recv(client, buf, DEFAULT_MAX_BUF_LEN, 0);
 //		if (byteRecv > 0)
 //			cout << "RECEIVED > " << string(buf, 0, byteRecv) << endl;
 //	}
